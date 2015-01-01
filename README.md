@@ -48,5 +48,6 @@ Sit back and wait till the download completes.
 
 ## Notes (READ ME)
   * **This script is intended for personal use only.** Please use it responsibly.
-  * It only works on M3U streams that list the songs themselves, not streams that list other lists. For example, it cannot download the M3U returned from GMusicProxy's `get_all_playlists`, because it only contains a list of other lists.
+  * This only works on M3U streams that list the songs themselves, not streams that list other lists. For example, this cannot download the M3U returned from GMusicProxy's `get_all_playlists`, because it only contains a list of other lists.
+  * This may not download some uploaded music that is not in Google's own catalog. This is a limitation/bug of gmusicproxy.
   * Distributed under GPLv2.
