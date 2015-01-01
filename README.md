@@ -47,5 +47,6 @@ $ ./download.sh ~/path/playlist-i-want.m3u ~/path/to/save/files
 Sit back and wait till the download completes.
 
 ## Notes (READ ME)
-  * **This script is intended for personal use only.**
-  * It only works on M3U streams that list the songs themselves, not streams that list other lists. For example, it cannot download the M3U returned from GMusicProxy's `get_all_playlists`, because it contains a list of other lists.
+  * **This script is intended for personal use only.** Please use it responsibly.
+  * It only works on M3U streams that list the songs themselves, not streams that list other lists. For example, it cannot download the M3U returned from GMusicProxy's `get_all_playlists`, because it only contains a list of other lists.
+  * Distributed under GPLv2.
