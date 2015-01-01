@@ -12,10 +12,10 @@ declare -i songs=($lines-1)/2
 
 for ((song = 1; song <= $songs; song++)); do
 	songtitle="$(awk "NR==$song*2 {print}" $playlist | cut -d',' -f2)"
-	echo "$song/$songs Downloading $songtitle"
+	echo -e "$song/$songs\tDownloading $songtitle"
 	
 	songlink="$(awk "NR==$song*2+1 {print}" $playlist)"
-	curl $songlink -o "$outputdir/$song $songtitle.mp3" -s
+	curl -o "$outputdir/$song $songtitle.mp3" -s $songlink
 done
 
-echo "All songs downloaded."
+echo -e "\nAll songs downloaded."
