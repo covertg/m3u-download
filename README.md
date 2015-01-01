@@ -1,11 +1,11 @@
 #playmusic-download
 
-This script works in conjunction with [GMusicProxy](http://gmusicproxy.net/) to download the songs in an .m3u stream, maintaining album art and ID3 tags. Tested on OS X 10.10, but should work elsewhere.
+This script works with [GMusicProxy](http://gmusicproxy.net/) to batch download songs from your Google Play Music account, maintaing album art and ID3 tags. It uses the M3U streams provided by GMusicProxy, so although it was intended for Google Play, it should work with many other .m3u files.
 
-Although it was intended for Google Play, it may work with other .m3u files, too.
+Tested on OS X 10.10, but it should work elsewhere.
 
 ## Requirements
-  * A working setup of GMusicProxy. See the website for instructions.
+  * A working setup of [GMusicProxy](http://gmusicproxy.net/) (see website for instructions).
   * That's about it. Basic bash knowledge and a working curl installation?
 
 ## Basic Usage
@@ -16,9 +16,9 @@ Output:
 ```bash
 Making folder <outputdir>
 
-1/TOTAL Downloading <Artist> - <Title>
+1/TOTAL		Downloading <Artist> - <Title>
 ...
-TOTAL/TOTAL Downloading <Artist> - <Title>
+TOTAL/TOTAL	Downloading <Artist> - <Title>
 
 All songs downloaded.
 ```
