@@ -3,7 +3,7 @@ playlist=$1
 outputdir=${2%/}
 
 if [ ! -d $outputdir ]; then
-	echo -e "Making folder $outputdir\n"
+	echo -e "Making folder $outputdir.\n"
 	mkdir -p $outputdir
 fi
 

@@ -14,7 +14,7 @@ $ download.sh <filename.m3u> <outputdir>
 ```
 Output:
 ```bash
-Making folder <outputdir>
+Making folder <outputdir>.
 
 1/TOTAL		Downloading <Artist> - <Title>
 ...
