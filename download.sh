@@ -21,7 +21,7 @@ fi
 playlist=$1
 outputdir=${2%/}
 
-if [ ! -d "$outputdir" ]; then
+if [ ! -d $outputdir ]; then
 	echo -e "Making folder $outputdir.\n"
 	mkdir -p $outputdir
 fi
