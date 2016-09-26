@@ -1,4 +1,23 @@
 #!/bin/bash
+set -ue
+
+usage() {
+    echo "Usage:" >&2
+    name=${i:-'download.sh'}
+    echo "$name PLAYLIST-FILE OUTPUT-DIRECTORY" >&2
+    exit 1
+}
+
+if [ -z "${1:+x}" ]; then
+    echo "No playlist file provided." >&2
+    usage
+fi
+
+if [ -z "${2+x}" ]; then
+    echo "Output directory not set." >&2
+    usage
+fi
+
 playlist=$1
 outputdir=${2%/}
 
