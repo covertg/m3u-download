@@ -4,7 +4,7 @@ set -ue
 usage() {
     echo "Usage:" >&2
     name=${i:-'download.sh'}
-    echo "$name PLAYLIST-FILE OUTPUT-DIRECTORY" >&2
+    echo "Usage: $name path/to/playlist.m3u path/to/output-directory" >&2
     exit 1
 }
 
