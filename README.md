@@ -22,7 +22,7 @@ TOTAL/TOTAL	Downloading <Artist> - <Title>
 All songs downloaded.
 ```
 
-## Example with GMusicProxy
+# Example with GMusicProxy
 With `gmusicproxy` running, find a playlist you wish to download:
 ```bash
 $ curl localhost:9999/get_all_playlists
