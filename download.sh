@@ -4,9 +4,8 @@ set -ue
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. <3
 
 usage() {
-    echo "Usage:" >&2
     name=${i:-'download.sh'}
-    echo "Usage: $name path/to/playlist.m3u path/to/output-directory" >&2
+    echo "Usage: $name path/playlist.m3u path/outputdir" >&2
     exit 1
 }
 
@@ -37,7 +36,7 @@ for ((song = 1; song <= $songs; song++)); do
 	echo -e "$song/$songs\tDownloading $songtitle"
 	
 	songlink="$(awk "NR==$song*2+1 {print}" $playlist)"
-	curl -o "$outputdir/$song $songtitle.mp3" -s "$songlink" --ignore-content-length
+	curl -o "$outputdir/$song $songtitle.mp3" "$songlink"  --silent --show-error
 done
 
 echo -e "\nAll songs downloaded."
