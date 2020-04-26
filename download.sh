@@ -37,7 +37,7 @@ for ((song = 1; song <= $songs; song++)); do
 	echo -e "$song/$songs\tDownloading $songtitle"
 	
 	songlink="$(awk "NR==$song*2+1 {print}" $playlist)"
-	curl -o "$outputdir/$song $songtitle.mp3" -s $songlink --ignore-content-length
+	curl -o "$outputdir/$song $songtitle.mp3" -s "$songlink" --ignore-content-length
 done
 
 echo -e "\nAll songs downloaded."
